@@ -92,24 +92,105 @@ textarea {
 }
 
 /* ==========================================================================
-   Author's custom styles
+          general Style
+   ========================================================================== */
+.red
+{
+    color:#CF1500;
+}
+
+.bagred
+{
+    background-color:#CF1500;
+}
+.upercase
+{
+    text-transform: uppercase;
+}
+          
+
+/* ==========================================================================
+                     Mobile  styles
    ========================================================================== */
 
+                        /*Header Style for mobile*/
 
 
 
+.header, .language_button, .entete
+{
+    display: flex;
+
+}
+.header .logo
+{
+    width: 30%;
+}
+.header .logo img
+{
+    width: 100%;
+
+}
 
 
+.header h1
+{
+    font-size: 0.8em;
+}
 
+#nav-link
+{
+    display: none;
+}
+.language_button
+{
+    justify-content: center;
+    width: 10%;
+    height: 20px;
+    align-self:top;
+    margin-right: 15px;
 
+}
+.language_button button
+{
+    border: none;
+    width: 50%-5px;
+    font-size: 0.6em;
+   color: white;
 
+}
+.button_fr
+{
+    border-bottom-left-radius: 5px;
+}
+.button_eng
+{
+    border-bottom-right-radius: 5px; 
+}
 
+.entete
+{
+    flex-direction: column;
+    align-items:center;
+    /*border: 1px solid red;*/
+}
+.button-mobile
+{
+   
+    border-color: #CF1500;
+    color: black; 
+    height: 30px;
+    width: 80px;
+    align-self: center;
+    border-radius: 5px;
+    background: none;
 
-
-
-
-
-
+}
+.button-mobile:hover
+{
+    color: #CF1500;
+    border-color: black;
+} 
 
 /* ==========================================================================
    Helper classes
