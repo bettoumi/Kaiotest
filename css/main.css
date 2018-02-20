@@ -107,7 +107,15 @@ textarea {
 {
     text-transform: uppercase;
 }
-          
+ .btn 
+ {
+    border: none;
+   height: 25px;
+    background-color: #CF1500;
+    font-size: 0.6em;
+    color: white;
+    text-transform: uppercase;
+ }        
 
 /* ==========================================================================
                      Mobile  styles
@@ -117,10 +125,14 @@ textarea {
 
 
 
-.header, .language_button, .entete
+.header, .language_button, .entete, .accueiltext, .acti-Actua
 {
     display: flex;
 
+}
+.header
+{
+    justify-content: space-between;
 }
 .header .logo
 {
@@ -146,9 +158,10 @@ textarea {
 {
     justify-content: center;
     width: 10%;
-    height: 20px;
+    height: 30px;
     align-self:top;
-    margin-right: 15px;
+    margin-right: 10px;
+    flex-direction: column;
 
 }
 .language_button button
@@ -161,11 +174,14 @@ textarea {
 }
 .button_fr
 {
-    border-bottom-left-radius: 5px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    padding-bottom: 10px: 
 }
 .button_eng
-{
-    border-bottom-right-radius: 5px; 
+{    border-bottom-left-radius: 4px; 
+    border-bottom-right-radius: 4px; 
+    padding-top: 10px;
 }
 
 .entete
@@ -191,6 +207,61 @@ textarea {
     color: #CF1500;
     border-color: black;
 } 
+
+
+
+
+                /*mainsection Style for mobile*/
+
+
+.mainsection
+{
+   height: 250px;
+   margin-bottom: 50px;
+}
+
+.accueiltext
+{
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 50px;
+  flex-direction: column;
+ 
+}
+.accueiltext h2
+{
+    font-size: 0.6em;
+}
+
+.accueiltext p
+{
+   font-size: 0.5em;
+   font-weight: bold;
+  letter-spacing: 0.1em;
+
+}
+.accueiltext .savoir
+{
+    border-radius: 5px;
+   align-self: right;
+}
+
+                         /*description section Style for mobile*/
+
+.description
+{
+    width: 70%;
+    margin:auto;
+}
+.acti-Actua
+{
+  flex-direction: column;
+}
+.Actuality
+{
+    
+ }   
+
 
 /* ==========================================================================
    Helper classes
