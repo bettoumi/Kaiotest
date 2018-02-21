@@ -115,7 +115,14 @@ textarea {
     font-size: 0.6em;
     color: white;
     text-transform: uppercase;
- }        
+ } 
+ .text-center
+ {
+    text-align: center;
+ }
+
+ 
+
 
 /* ==========================================================================
                      Mobile  styles
@@ -125,7 +132,7 @@ textarea {
 
 
 
-.header, .language_button, .entete, .accueiltext, .acti-Actua
+.header, .language_button, .entete, .accueiltext, .acti-Actua, .footer
 {
     display: flex;
 
@@ -248,7 +255,7 @@ textarea {
 
                          /*description section Style for mobile*/
 
-.description
+.description , .caroussel
 {
     width: 80%;
     margin:auto;
@@ -318,9 +325,10 @@ textarea {
   {
     display: flex;
     /*flex-wrap: wrap;*/
-    justify-content:  stretch;
+    align-items: stretch;
     /*flex-basis: content;*/
     width: 100%;
+    overflow: hidden;
   }
 
   }
@@ -365,6 +373,62 @@ textarea {
  {
     font-size: 0.8em;
  }
+
+                                /*Informations style section*/
+
+
+ .informations
+ {
+   margin-bottom: 50px;
+ }
+   .card
+ {
+   display: flex;
+   flex-direction: column;
+   margin-bottom: 30px;
+ }  
+  
+ .card span
+ {
+     align-self: center;
+ }
+  .card a
+ {
+    text-align: right;
+    padding-top: 8px ;
+    padding-right:  10px ;
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom-right-radius: 10px;
+ }
+
+
+                                    /*carroussel section*/
+
+.nosmarques
+{
+    text-align: center;
+    /*background-color: #f2efeb;*/
+}
+.btn2
+{
+    border-radius: 8px;
+}
+
+
+        
+                    /*footer style*/
+
+.footer
+{
+  justify-content: space-around;
+  font-size:0.5em;
+  padding-top: 30px;
+}
+
+
+
+
 
 
 /* ==========================================================================
