@@ -132,7 +132,7 @@ textarea {
 
 
 
-.header, .language_button, .entete, .accueiltext, .acti-Actua, .footer
+.header, .language_button, .entete, .accueiltext, .acti-Actua, .footer, .mainsection, .informations 
 {
     display: flex;
 
@@ -225,12 +225,23 @@ textarea {
 {
    height: 250px;
    margin-bottom: 30px;
-}
 
+
+}
+.rightespace
+{
+    flex: 2;
+
+}
+.leftespace
+{
+    min-width: 80px;
+}
 .accueiltext
 {
-  margin-left: 20px;
+  /*margin-left: 30px;*/
   margin-right: 20px;
+  max-width: 300px;
   margin-top: 50px;
   flex-direction: column;
  
@@ -267,7 +278,7 @@ textarea {
 }
 .Actuality
 {
-    border-radius: 4px;
+    border-radius: 7px;
     background-color: #C8CBC5;
     margin-bottom: 50px;
     width: 100%;
@@ -277,18 +288,7 @@ textarea {
     flex-direction: column;
 
  }
- /*.img_groupe
- {
-   background-image: url("../img/groupe.png");
-   background-size: auto;
-   background-repeat: no-repeat;
- }
- .img_activite
- {
-   background-image: url("../img/Activite.png");
-    background-size: auto;
-    background-repeat: no-repeat;
- }*/
+ 
  .text-actu
  {
     margin-left: 20px;
@@ -380,6 +380,7 @@ textarea {
  .informations
  {
    margin-bottom: 50px;
+   flex-direction: column;
  }
    .card
  {
@@ -426,11 +427,70 @@ textarea {
   padding-top: 30px;
 }
 
+/* ==========================================================================
+                        CSS for max 650px
+   ========================================================================== */
+
+@media (min-width: 600px)
+ {
+      
+           .acti-Actua
+        {
+          flex-direction: row;
+          border: 1px solid green;
+          justify-content: space-between;
+        }
+
+       .Actuality
+{
+   
+   
+    width: 48%;
+    
+    height: 400px;
+    display: flex;
+    /*margin-right: 10px;*/
+    flex-direction: column;
+  
+ }
+     .informations
+ {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+     
+ }
+ .card
+ {
+    max-width: 40%; 
+ }
 
 
 
 
+  }
 
+/* ==========================================================================
+                        CSS for max 900px
+   ========================================================================== */
+
+@media (min-width: 900px)
+ {
+      
+     .informations
+ {
+    
+    flex-wrap:nowrap;
+     
+ }
+ .card
+ {
+    max-width: 24%; 
+ }
+
+
+
+}
 /* ==========================================================================
    Helper classes
    ========================================================================== */
