@@ -324,12 +324,17 @@ textarea {
   .links2 
   {
     display: flex;
-    /*flex-wrap: wrap;*/
-    align-items: stretch;
+   
+    /*align-items: stretch;*/
     /*flex-basis: content;*/
     width: 100%;
     overflow: hidden;
   }
+  .links2 a:nth-child(3)
+  {
+    flex-grow: 2;
+  }
+
 
   }
   .links2 
@@ -406,6 +411,42 @@ textarea {
 
                                     /*carroussel section*/
 
+
+
+
+
+ 
+.slid
+{
+    width: 80%;
+    height: 200px;
+    margin:auto;
+    padding-right: 10px;
+    padding-left: 10px;
+   
+    position: relative;
+   
+}
+
+.fig
+{
+    width: 70%;
+    margin:auto;
+    height: 100%;
+   /* /*display: none;*/
+    /*position: relative;*/
+    transition: all 0.66s ease; 
+    box-shadow: 2px 3px 1px grey;
+    
+}
+.fig img
+{
+    width: 100%;
+    height:100%;
+    margin: auto;
+
+}
+
 .nosmarques
 {
     text-align: center;
@@ -415,6 +456,11 @@ textarea {
 {
     border-radius: 8px;
 }
+
+
+
+
+
 
 
         
