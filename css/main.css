@@ -132,7 +132,7 @@ textarea {
 
 
 
-.header, .language_button, .entete, .accueiltext, .acti-Actua, .footer, .mainsection, .informations 
+.header, .language_button, .entete, .accueiltext, .acti-Actua, .footer, .mainsection, .informations, #nav 
 {
     display: flex;
 
@@ -156,11 +156,44 @@ textarea {
 {
     font-size: 0.8em;
 }
-
-#nav-link
+.navmobile
 {
     display: none;
 }
+.nav-linkmobile
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    list-style-type: none;
+    /*margin:0px;*/
+    width: 100%;
+    align-self: flex-start;
+    margin-left: -30px;
+
+}
+
+
+.nav-linkmobile li a
+{
+    padding: 0.2em 0em;
+    margin:10px 20px;
+    color: black;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+
+}
+#nav
+{
+  flex-direction: column;
+  justify-content: center;
+}
+.nav-linkmobile li a:hover
+{
+    background-color:#CF1500;
+}
+
 .language_button
 {
     justify-content: center;
@@ -195,8 +228,7 @@ textarea {
 {
     flex-direction: column;
     align-items:center;
-    /*border: 1px solid red;*/
-}
+  }  
 .button-mobile
 {
    
@@ -224,7 +256,7 @@ textarea {
 .mainsection
 {
    height: 250px;
-   margin-bottom: 30px;
+   margin-bottom: 80px;
 
 
 }
@@ -239,7 +271,7 @@ textarea {
 }
 .accueiltext
 {
-  /*margin-left: 30px;*/
+ 
   margin-right: 20px;
   max-width: 300px;
   margin-top: 50px;
@@ -262,6 +294,7 @@ textarea {
 {
     border-radius: 5px;
    align-self: right;
+   padding: 8px;
 }
 
                          /*description section Style for mobile*/
@@ -274,7 +307,7 @@ textarea {
 .acti-Actua
 {
   flex-direction: column;
-  border: 1px solid green;
+  
 }
 .Actuality
 {
@@ -282,7 +315,7 @@ textarea {
     background-color: #C8CBC5;
     margin-bottom: 50px;
     width: 100%;
-    border: 1px solid red;
+   
     height: 400px;
     display: flex;
     flex-direction: column;
@@ -302,31 +335,25 @@ textarea {
     position: relative;
     top: 0;
     overflow: hidden;
-    /*left: 50%;*/
+  
   }
   .links
   {
-    border:  1px solid pink;
-    /*align-self: end;*/
-    width: 100%;
-     
-
       
-     
-    
+    width: 100%;
+       
   }
+
   .links1
   {
     display: flex;
-    /*text-align: right;*/
+    
     justify-content: flex-end;
   }
   .links2 
   {
     display: flex;
    
-    /*align-items: stretch;*/
-    /*flex-basis: content;*/
     width: 100%;
     overflow: hidden;
   }
@@ -353,7 +380,7 @@ textarea {
     color: white;
     margin:0px;
     padding: 5px 5px;
-    border:1px solid green;
+    
     text-transform: uppercase;
     
    
@@ -433,8 +460,6 @@ textarea {
     width: 70%;
     margin:auto;
     height: 100%;
-   /* /*display: none;*/
-    /*position: relative;*/
     transition: all 0.66s ease; 
     box-shadow: 2px 3px 1px grey;
     
@@ -450,8 +475,7 @@ textarea {
 .nosmarques
 {
     text-align: center;
-    /*background-color: #f2efeb;*/
-}
+ }  
 .btn2
 {
     border-radius: 8px;
@@ -479,42 +503,86 @@ textarea {
 
 @media (min-width: 600px)
  {
+
+           
       
            .acti-Actua
         {
           flex-direction: row;
-          border: 1px solid green;
           justify-content: space-between;
         }
 
        .Actuality
-{
-   
-   
-    width: 48%;
-    
-    height: 400px;
-    display: flex;
-    /*margin-right: 10px;*/
-    flex-direction: column;
-  
- }
+       {     
+           width: 48%;
+            
+            height: 400px;
+         
+       }
+
      .informations
- {
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
+     {
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
      
- }
- .card
- {
-    max-width: 40%; 
- }
+      }
+     .card
+     {
+        max-width: 40%; 
+     }
 
 
 
 
   }
+
+/* ==========================================================================
+                        CSS for min 720px
+   ========================================================================== */
+
+@media (min-width: 720px)
+ {
+      
+
+
+  /* dislay nav */
+
+            #nav_button
+           {
+
+                display:none;
+           }
+           .navmobile
+           {
+                 display: flex;
+                 flex-direction: row;
+                 justify-content: space-around;
+                 list-style-type: none;
+                 width: 100%;
+
+           }
+           .navmobile  li a
+           {
+                 padding: 0.5em 0.6em;
+                margin:5px 5px;
+                color: black;
+                display: block;
+                text-decoration: none;
+                text-align: center;
+                font-size: 0.6em;
+           }
+
+            .navmobile  li a:hover
+            {
+                background-color:#CF1500;
+                color: white;
+                font-style: italic;
+                font-weight: bold;
+            }
+
+
+}
 
 /* ==========================================================================
                         CSS for max 900px
@@ -523,20 +591,131 @@ textarea {
 @media (min-width: 900px)
  {
       
-     .informations
- {
-    
-    flex-wrap:nowrap;
-     
- }
- .card
- {
-    max-width: 24%; 
- }
+                 .informations
+             {
+                
+                flex-wrap:nowrap;
+                 
+             }
+
+              .Actuality
+              {
+
+                flex-direction: row;
+                height: 280px;
+                justify-content: space-between;
+
+               
+              }
+
+              .act_text
+             {
+                margin-left: 10px;
+                
+              display: flex;
+              flex-direction: column;
+              justify-content: flex-end;
+
+             }
+             .actu-text h3
+             {
+                font-size: 0.6em;
+             }
+               
+             .Actuality   img {
+                width: 80%;
+                height: 100%;
+                position: relative;
+                top: 0;
+                overflow: hidden;
+               
+              }
+            
+
+
+             .card
+             {
+                max-width: 24%; 
+             }
 
 
 
 }
+
+  /* ==========================================================================
+                        CSS for max 1200px
+   ========================================================================== */
+
+@media (min-width: 1200px)
+ {
+                 .header
+            {
+                justify-content: space-around;
+            }
+            .header .logo
+            {
+                width: 20%;
+            } 
+            .entete
+            {
+              align-items:flex-start;
+            }
+
+               .header h1
+            {
+                font-size: 1em;
+             
+             }
+           .language_button
+            {
+                justify-content: center;
+                width: 80px;
+                height: 35px;
+                align-self:flex-start;
+                margin-right: 10px;
+                flex-direction: row;
+
+            }
+            .language_button button
+            {
+                border: none;
+                width: 50%-5px;
+                font-size: 0.6em;
+               color: white;
+
+            }
+            .button_fr
+            {
+               border-top-left-radius:0px;
+                border-top-right-radius: 0px;
+
+                border-bottom-left-radius: 4px;
+                
+                padding-bottom: 15px: 
+            }
+            .button_eng
+                { 
+                  border-bottom-left-radius: 0px; 
+                  
+                  border-bottom-right-radius: 4px; 
+                    padding-bottom:  10px;
+                }
+
+          .text-actu
+             {
+                margin-left: 0px;
+             }
+          .Actuality   img {
+                /*width: 100%;*/
+                align-self: stretch;
+                position: relative;
+                top: 0;
+                overflow: hidden;
+              
+              }
+
+}
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
